@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.vodqa.mobile"
-        minSdkVersion 18
+        minSdkVersion 24
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -15,6 +15,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
     }
 }
 
@@ -27,7 +31,14 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     // https://mvnrepository.com/artifact/io.appium/java-client
     compile group: 'io.appium', name: 'java-client', version: '7.0.0'
+    /*compile
+    {
+        group: 'io.appium', name: 'java-client', version: '7.0.0'
+        exlude group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+        exclude group: 'org.seleniumhq.selenium', name: 'selenium-support', version: '3.141.59'
+        exclude group: 'org.seleniumhq.selenium', name: 'selenium-api', version: '3.141.59'
+    }*/
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    /*compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'*/
 
 }
