@@ -17,7 +17,7 @@ public class FirstTest {
 
     WebDriver driver;
 
-    @Before
+    /*@Before
     public void setUp() throws MalformedURLException {
         // Created object of DesiredCapabilities class.
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -48,7 +48,7 @@ public class FirstTest {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
 
-    }
+    }*/
 
     @Test
     public void testFirstCalculator() {
@@ -63,8 +63,8 @@ public class FirstTest {
         driver.manage().timeouts().implicitlyWait(300,TimeUnit.SECONDS);
     }
 
-    @After
+    /*@After
     public void End() {
         driver.quit();
-    }
+    }*/
 }
